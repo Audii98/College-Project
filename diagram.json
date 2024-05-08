@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 20, "left": 50, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": 290.81,
+      "left": 69.41,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -52.58, "left": 282.14, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 145.62, "left": 390.53, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.2", "lcd:GND", "black", [ "v24", "*", "h-20" ] ],
+    [ "uno:5V", "lcd:VCC", "red", [ "v28", "*", "h-16" ] ],
+    [ "uno:A4", "lcd:SDA", "green", [ "v32", "*", "h-12" ] ],
+    [ "uno:A5", "lcd:SCL", "blue", [ "v36", "*", "h-8" ] ],
+    [ "relay1:VCC", "uno:5V", "red", [ "h-266.35", "v256.25", "h191.83" ] ],
+    [ "relay1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "uno:2", "relay1:IN", "green", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v23.53", "h-190.4" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v26.11", "h-219.05" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v14.06", "h-171.73" ] ]
+  ]
+}
