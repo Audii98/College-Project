@@ -1,8 +1,4 @@
-Based on the provided document, here is a draft for a GitHub README file for your graduation project on a Liquid Battery Cooling System:
-
----
-
-# Liquid Battery Cooling System
+## Liquid Battery Cooling System
 
 This repository contains the project files for the Liquid Battery Cooling System, developed as a part of our Bachelor of Engineering (Automobile) at Dr. D. Y. Patil School of Engineering Academy, Ambi, Pune (2022-2023).
 
